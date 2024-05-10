@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Project_II.css">
+    
+    <title>FEE MANAGER</title>
+</head>
+
+<body onload="setDate()" bgcolor="#C0C0C0">
+    <div class="ribbon"></div>
+    <div class="hidden" id="pop-up">
+
+    </div>
+    <h1 class="center">Welcome to</h1>
+    <h1 class="small center cadetblue">Fee Management System.</h1>
+    <hr>
+    <div class="center text-shadow">"<b class="cadetblue">Teachers</b> can open the door, but you must enter it yourself."</div>
+    <hr>
+    <section class="center">
+        <button class="btn" onclick="showAddClassPopup()">Add a Class</button>
+        <button class="btn" onclick="deleteCurrentClass()">Delete this Class</button>
+        <button class="btn" onclick="showAddStudentPopup()">Add a Student</button>
+        <span>
+            <select name="" id="select"
+                oninput="classChange(this.value), selectOnLoad(this.value), makeTable()"></select>
+        </span>
+    </section>
+    <div class="table-container">
+        <table border="">
+            <thead>
+                <tr>
+                    <th>Sr No.</th>
+                    <th width="300px">Student Name</th>
+                    <th width="150px">Condition</th>
+                    <th width="150px">NO. of subjects</th>
+                    <th width="150px">Total Fee</th>
+                    <th width="150px">Contact NO.</th>
+                    <th width="300px">Action</th>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+    </div>
+    <div id="fee-status"></div>
+    <div class="center">
+        <button class="btn" onclick="removeData()">Erase All Data</button>
+        <button class="btn" onclick="resetCondition()">Reset All Conditons</button>
+    </div>
+    <footer id="footer">
+        Developed By: &copy;CSE-D UID <span class="cadetblue"> &nbsp;</span>
+    </footer>
+    <script src="Project_II.js"></script>
+</body>
+</html>
